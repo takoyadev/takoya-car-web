@@ -1,0 +1,16 @@
+<div >
+  <h3>Date</h3>
+  <p>{{data.date|date:'short'}}</p>
+</div>
+<div>
+  <h3>Car</h3>
+  <p>{{data.car?.brand}} {{data.car?.model}} [{{data.car?.licensePlate}}]</p>
+</div>
+<div>
+  <h3>Owner</h3>
+  <p>{{data.car?.owner?.firstName}} {{data.car?.owner?.lastName}}</p>
+</div>
+<div>
+  <h3>Description</h3>
+  <p [innerHTML]="data.description" style="white-space: pre-wrap;"></p>
+</div>

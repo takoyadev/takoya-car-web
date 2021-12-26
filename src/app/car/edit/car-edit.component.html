@@ -1,0 +1,56 @@
+<mat-form-field appearance="fill">
+  <mat-label>License Plate</mat-label>
+  <input matInput
+     [(ngModel)]="data.licensePlate"
+     #userName="ngModel"
+     name="licensePlate"
+     type="text"
+     required
+  >
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>Owner</mat-label>
+  <mat-select
+    [(ngModel)]="data.owner"
+    #userName="ngModel"
+    name="car"
+    required
+  >
+    <!--    <input (keyup)="onKey($event.target.value)">-->
+    <mat-option>None</mat-option>
+    <mat-option *ngFor="let owner of selectedOwners" [value]="owner">{{owner.firstName}} {{owner.lastName}}</mat-option>
+  </mat-select>
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>Brand</mat-label>
+  <input matInput
+         [(ngModel)]="data.brand"
+         #userName="ngModel"
+         name="brand"
+         type="text"
+         required
+  >
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>Model</mat-label>
+  <input matInput
+         [(ngModel)]="data.model"
+         #userName="ngModel"
+         name="model"
+         type="text"
+         required
+  >
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>Status</mat-label>
+  <mat-select
+    [(ngModel)]="data.status"
+    #userName="ngModel"
+    name="status"
+    type="text"
+    required
+  >
+    <mat-option value="OK">OK</mat-option>
+    <mat-option value="KO">KO</mat-option>
+  </mat-select>
+</mat-form-field>

@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>Adding a maintenance</h1>
+<div mat-dialog-content>
+  <app-maintenance-edit></app-maintenance-edit>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Add</button>
+</div>

@@ -1,0 +1,15 @@
+<mat-toolbar color="primary">
+  <button mat-flat-button color="primary" routerLink="">Takoya-car</button>
+  <span class="flexExpand"></span>
+  <button mat-flat-button color="primary" routerLink="maintenances" [disabled]="!hasCarsAccess">Maintenances</button>
+  <button mat-flat-button color="primary" routerLink="cars" [disabled]="!hasMaintenancesAccess">Cars</button>
+  <button mat-flat-button color="primary" routerLink="owners" [disabled]="!hasOwnersAccess">Owners</button>
+  <span class="flexExpand"></span>
+  <ng-container *ngIf="(_auth.isAuthenticated$ | async); then loggedIn else loggedOut"></ng-container>
+  <ng-template #loggedIn>
+    <button mat-flat-button color="primary" (click)="_auth.logout({ returnTo: _document.location.origin })" class="mat-elevation-z8">Log out</button>
+  </ng-template>
+  <ng-template #loggedOut>
+    <button mat-flat-button color="primary" (click)="_auth.loginWithRedirect()" class="mat-elevation-z8">Log in</button>
+  </ng-template>
+</mat-toolbar>
