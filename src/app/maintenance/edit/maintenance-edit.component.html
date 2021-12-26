@@ -1,0 +1,48 @@
+<mat-form-field appearance="fill">
+  <mat-label>Date</mat-label>
+  <input matInput
+     [(ngModel)]="data.date"
+     #userName="ngModel"
+     name="date"
+     required
+  >
+<!--  FIXME-->
+<!--  [matDatepicker]="picker"-->
+<!--  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>-->
+<!--  <mat-datepicker #picker></mat-datepicker>-->
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>Title</mat-label>
+  <input matInput
+         [(ngModel)]="data.title"
+         #userName="ngModel"
+         name="title"
+         type="text"
+         required
+  >
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>Car</mat-label>
+  <mat-select
+    [(ngModel)]="data.car"
+    #userName="ngModel"
+    name="car"
+    required
+  >
+<!--    <input (keyup)="onKey($event.target.value)">-->
+    <mat-option>None</mat-option>
+    <mat-option *ngFor="let car of selectedCars" [value]="car">
+      {{car.brand}} {{car.model}} [{{car.licensePlate}}] / {{car.owner?.firstName}} {{car.owner?.lastName}})
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>Description</mat-label>
+  <textarea matInput
+         [(ngModel)]="data.description"
+         #userName="ngModel"
+         name="description"
+         type="text"
+         required
+  ></textarea>
+</mat-form-field>
