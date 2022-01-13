@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "node --max-old-space-size=8192 ./node_modules/@angular/cli/bin/ng serve --port %PORT%",
+    "start": "node --max-old-space-size=8192 ./node_modules/@angular/cli/bin/ng serve --port $PORT",
     "build": "node --max-old-space-size=8192 ./node_modules/@angular/cli/bin/ng build",
     "watch": "node --max-old-space-size=8192 ./node_modules/@angular/cli/bin/ng build --watch --configuration development",
     "test": "node --max-old-space-size=8192 ./node_modules/@angular/cli/bin/ng test"
