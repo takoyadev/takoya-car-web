@@ -17,7 +17,10 @@ import {CarDetailDialogComponent} from "./detail-dialog/car-detail-dialog.compon
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {CarViewComponent} from "./view/car-view.component";
 import {CarEditDialogComponent} from "./edit-dialog/car-edit-dialog.component";
-import {MatSnackBar, MatSnackBarModule} from "@angular/material/snack-bar";
+import {MatSnackBarModule} from "@angular/material/snack-bar";
+import {CarCardComponent} from './card/car-card.component';
+import { CarGridComponent } from './grid/car-grid.component';
+import {MatCardModule} from "@angular/material/card";
 
 @NgModule({
   declarations: [
@@ -29,10 +32,13 @@ import {MatSnackBar, MatSnackBarModule} from "@angular/material/snack-bar";
     CarEditDialogComponent,
     CarSuccessAddSnack,
     CarSuccessEditSnack,
+    CarCardComponent,
+    CarGridComponent,
   ],
   exports: [
     CarListComponent,
     CarDetailDialogComponent,
+    CarGridComponent,
   ],
   imports: [
     BrowserAnimationsModule,
@@ -49,6 +55,7 @@ import {MatSnackBar, MatSnackBarModule} from "@angular/material/snack-bar";
     CarRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    MatCardModule,
   ],
 })
 export class CarModule { }
