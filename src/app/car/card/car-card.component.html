@@ -12,6 +12,6 @@
   <mat-card-actions>
     <button mat-button>Details</button>
     <button mat-button>Maintenances</button>
-    <button mat-button matBadge="2">Issues</button>
+    <button mat-button matBadge="{{car?.issues?.length}}">Issues</button>
   </mat-card-actions>
 </mat-card>

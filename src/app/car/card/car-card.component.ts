@@ -15,7 +15,7 @@ export class CarCardComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    console.log("car:"+this.car);
+    console.log(this.car);
   }
 
 }

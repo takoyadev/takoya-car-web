@@ -1,4 +1,5 @@
 import {Car} from "../car/car";
+import {Issue} from "../issue/issue";
 
 export class Maintenance {
 
@@ -7,6 +8,7 @@ export class Maintenance {
   date?: Date;
   description?: String;
   title?: String;
+  issues?: Issue[];
 
   constructor(id?: Number, car?: Car, date?: Date, description?: String, title?: String) {
     this.id = id;
