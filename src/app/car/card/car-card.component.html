@@ -1,13 +1,13 @@
 <mat-card class="car-card mat-elevation-z4">
   <mat-card-header>
     <div mat-card-avatar class="car-card-header-image">
-      <img mat-card-image src="{{car?.owner?.picture}}"  alt="Cyril's car" />
+      <img mat-card-image src="https://res.cloudinary.com/hzvvd5ncu/image/upload/e_vignette:5,c_pad,h_300,w_300/v1642984718/owners/{{car?.owner?.picture}}"  alt="Cyril's car" />
     </div>
     <mat-card-title>{{car?.owner?.firstName}}'s {{car?.brand}} {{car?.model}}</mat-card-title>
     <mat-card-subtitle>{{car?.licensePlate}}</mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
-    <img mat-card-image src="{{car?.picture}}"  alt="Cyril's car" />
+    <img mat-card-image src="https://res.cloudinary.com/hzvvd5ncu/image/upload/c_pad,h_300,w_400/v1642986069/cars/{{car?.picture}}"  alt="Cyril's car" />
   </mat-card-content>
   <mat-card-actions>
     <button mat-button>Details</button>
