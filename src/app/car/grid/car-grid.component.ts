@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Car} from "../car";
+import {CarService} from "../car.service";
 
 @Component({
   selector: 'app-car-grid',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarGridComponent implements OnInit {
 
-  constructor() { }
+  cars: Car[] = [];
+
+  constructor(private _carsService: CarService) { }
 
   ngOnInit(): void {
+    this._carsService.findAll().subscribe(result => {
+      this.cars = result;
+    });
   }
 
 }

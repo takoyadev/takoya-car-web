@@ -21,6 +21,8 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {CarCardComponent} from './card/car-card.component';
 import { CarGridComponent } from './grid/car-grid.component';
 import {MatCardModule} from "@angular/material/card";
+import {FlexLayoutModule} from "@angular/flex-layout";
+import {MatBadgeModule} from "@angular/material/badge";
 
 @NgModule({
   declarations: [
@@ -56,6 +58,8 @@ import {MatCardModule} from "@angular/material/card";
     FormsModule,
     ReactiveFormsModule,
     MatCardModule,
+    FlexLayoutModule,
+    MatBadgeModule,
   ],
 })
 export class CarModule { }

@@ -8,6 +8,7 @@ export class Car {
   model?: String;
   status?: String;
   owner?: Owner;
+  picture?: String;
 
   constructor(id?: Number, licensePlate?: String, brand?: String, model?: String, status?: String, owner?: Owner) {
     this.id = id;

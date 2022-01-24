@@ -1,5 +1,10 @@
-<app-car-card></app-car-card>
-<app-car-card></app-car-card>
-<app-car-card></app-car-card>
-<app-car-card></app-car-card>
-<app-car-card></app-car-card>
+<div class="content">
+  <div fxLayout="row wrap" fxLayoutGap="16px grid">
+    <div fxFlex="25%" *ngFor="let car of cars">
+      <app-car-card [car]="car" style="width: 400px;"></app-car-card>
+    </div>
+<!--    <div fxFlex="25%">-->
+<!--      <app-car-card style="width: 400px;">&lt;!&ndash; TODO custom card for ADD button &ndash;&gt;</app-car-card>-->
+<!--    </div>-->
+  </div>
+</div>
